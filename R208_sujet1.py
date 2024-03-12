@@ -6,9 +6,7 @@
 
 #1. creation fonction ajout de valeur
 def enregistrevaleur(tab,date,heure,idcap,val,donnee):
-    date=(h, sec, minu)
-    idcap=int()
-    tab.append([tab, date, heure, idcap, val, donnee])
+    tab.append([tab, date, heure, idcap, val, donnee]) #on rajouter toutes ces valeur dans un tableau
     return(tab)
 
 #2. afficher dans ordre d'insert 
@@ -25,7 +23,7 @@ def filtreid(tab,idcap):
         if tab[i][2]==id:
             result.append(tab[i])
     return result
-
+    
 #4. filtre tab pour date
 def filtredate(tab,date):
     result=[]
@@ -36,10 +34,6 @@ def filtredate(tab,date):
     return result
     
 #5. trie odre chrono date heure
-def tri(tab):
-    for i in range(len(tab)-1):
-        rmin=ranmintab(tab,i)
-        permut(tab,i,rmin)
 
 def rangmintab(tab,p):
     res=p
@@ -47,6 +41,12 @@ def rangmintab(tab,p):
         if tab [i]<tab[res]:
             res=i
         return res
+
+def tri(tab):
+    for i in range(len(tab)-1):
+        rmin=rangmintab(tab,i)
+        permut(tab,i,rmin)
+
 
 def permut(tab,a,b):
     temp=tab[a]
@@ -60,8 +60,8 @@ def menu(tab):
     while True :
         print('a : si vous souhaiter enregistrer une nouvelle valeur')
         print('b : si vous souhaiter filtrer les valeurs')
-        print('c : si vous souhaiter quitter')
-        choix=input('que souhaiter vous faire ? (vous ne pouvais pas quitter sans entrer au moins une valeur)')
+        print('c : si vous souhaiter quitter et afficher le resultat')
+        choix=input('que souhaiter vous faire ? (vous ne pouvais pas quitter sans entrer au moins une valeur) : ')
         
         if choix=='a':
             dateint=(input('entrer l\'anee \n '),input('entrer le mois \n '),input('entrer le jour\n '))
@@ -83,11 +83,13 @@ def menu(tab):
 
         elif choix=='b':
             tri(tab)
+            print(tab)
+            
 
         elif choix=='c' :
             print('fin')
             print(enregistrevaleur(tab,dateint,heureint,idcapint,valint,typedon))  
-            quit() 
+            quit()
         
         else :
             print("entrer non valide\n")
