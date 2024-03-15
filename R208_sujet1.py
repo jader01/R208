@@ -48,7 +48,7 @@ def tri(tab): #fonction de trie
         permut(tab,i,rmin) #on associe les variable a permute pour la fonction d'après
 
 
-def permut(tab,a,b): #
+def permut(tab,a,b): #permut a en paramètre les paramètre ci dessus
     temp=tab[a]
     tab[a]=tab[b]
     tab[b]=temp
