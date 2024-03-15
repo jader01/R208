@@ -27,7 +27,11 @@ def selectnum(tab):
         print(num) #on affiche sont indice
 
 
+#4. link personne tab
+def linkparent():
     
+
+
 ##################################################################
 #                           apl de fonction
 #################################################################
@@ -40,6 +44,8 @@ adperson(tab, 'nemesis', 'noah', 1, (2004, 2, 2))
 
 printtab()
 selectnum(tab)
+
+adparent(tab, 0, 1)
 
 #adparent(tab, 0, 1)
 
