@@ -25,24 +25,24 @@ def filtreid(tab,idcap): #filtrer les id avec en paramètre le tableau et les id
     return result
     
 #4. filtre tab pour date
-def filtredate(tab,date): # 
-    result=[]
+def filtredate(tab,date): # on fait une fonction avec en paramètre le tableau puis la date
+    result=[] #tableau pour 
 
-    for i in range(len(tab)): 
-        if tab[i][0]==id:
-            result.append(tab[i])
+    for i in range(len(tab)): #pour toutes les ligne allant jusqu'a la longeur du tableau
+        if tab[i][0]=id: # si pour toutes les lignes l'emplament de id est égale à idea
+            result.append(tab[i]) #on rajoute la ligne dans notre table de resultat
     return result
     
 #5. trie odre chrono date heure
 
-def rangmintab(tab,p):
-    res=p
-    for i in range (p,len(tab)):
-        if tab [i]<tab[res]:
-            res=i
+def rangmintab(tab,p): #on fait une fonction avec en paramètre le tableau puis une variable p
+    res=p #on associe la variable p entrer en paramètre a 'res'
+    for i in range (p,len(tab)): #pour toutes les lignes allant de p a la longeur du tableau 
+        if tab [i]<tab[res]: # si la valeur de la ligne est inferieur au resultat passer en paramètre
+            res=i #alors on assoscie la valeur du resulstat passer en paramètre au numéro de ligne
         return res
 
-def tri(tab):
+def tri(tab): #fonction de trie
     for i in range(len(tab)-1):
         rmin=rangmintab(tab,i)
         permut(tab,i,rmin)
