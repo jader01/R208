@@ -5,27 +5,27 @@
 
 
 #1. creation fonction ajout de valeur
-def enregistrevaleur(tab,date,heure,idcap,val,donnee):
+def enregistrevaleur(tab,date,heure,idcap,val,donnee): #enregistrement de valeur
     tab.append([tab, date, heure, idcap, val, donnee]) #on rajouter toutes ces valeur dans un tableau
-    return(tab)
+    return(tab) 
 
 #2. afficher dans ordre d'insert 
 def odreinsert(tab):
-    for i in range(len(tab)):
-        for j in range(tab[i]):
-            print(tab[i][j]+'\t')
+    for i in range(len(tab)): # pour toutes les ligne jusqu'a la taille du tableau (len(tab)= la longueur du tableau) et (i= au nombre de ligne (a tout les tableau dans le tableau))
+        for j in range(tab[i]): # pour toutes les collones "j" jusqu'a la taille de tous les element de i
+            print(tab[i][j]+'\t') #on affiche i la ligne puis j la colone (le \'t' etant un tab pour l'affichage)
 
 #3. filtrer tab pour ligne idcapteur 
-def filtreid(tab,idcap):
-    result=[]
+def filtreid(tab,idcap): #filtrer les id avec en paramètre le tableau et les identifiant de capteur
+    result=[] #tableau pour stocker le resultat
     
-    for i in range(len(tab)): 
-        if tab[i][2]==id:
-            result.append(tab[i])
+    for i in range(len(tab)): #pour toutes les ligne allant jusqu'a la longeur du tableau
+        if tab[i][2]==id: # si pour toutes les lignes l'emplament de id est égale à idea
+            result.append(tab[i]) #on rajoute la ligne dans notre table de resultat
     return result
     
 #4. filtre tab pour date
-def filtredate(tab,date):
+def filtredate(tab,date): # 
     result=[]
 
     for i in range(len(tab)): 
@@ -94,18 +94,21 @@ def menu(tab):
         else :
             print("entrer non valide\n")
 
-            
+
+def main():
+    tab = []
+    menu(tab)
+    #enregistrevaleur(tab,(2,3,2022),(10,50,1),8,22.4,'TEMP')
+    odreinsert(tab)
+    t1=filtreid(tab,'8')
+    print(t1)
+    t2=filtredate(t1,(3,3,2002))
+    print(t2)
+    t3=filtredate(filtreid(tab,'8'),(3,3,2022))
+
     
 ##################################################################
 #                           apl de fonction
 #################################################################
 
-tab = []
-menu(tab)
-#enregistrevaleur(tab,(2,3,2022),(10,50,1),8,22.4,'TEMP')
-odreinsert(tab)
-t1=filtreid(tab,'8')
-print(t1)
-t2=filtredate(t1,(3,3,2002))
-print(t2)
-t3=filtredate(filtreid(tab,'8'),(3,3,2022))
+main()
