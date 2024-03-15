@@ -33,22 +33,22 @@ def filtredate(tab,date): # on fait une fonction avec en paramètre le tableau p
             result.append(tab[i]) #on rajoute la ligne dans notre table de resultat
     return result
     
-#5. trie odre chrono date heure
+#5. trie odre chrono date heure (trie a bulle)
 
 def rangmintab(tab,p): #on fait une fonction avec en paramètre le tableau puis une variable p
     res=p #on associe la variable p entrer en paramètre a 'res'
     for i in range (p,len(tab)): #pour toutes les lignes allant de p a la longeur du tableau 
         if tab [i]<tab[res]: # si la valeur de la ligne est inferieur au resultat passer en paramètre
-            res=i #alors on assoscie la valeur du resulstat passer en paramètre au numéro de ligne
+            res=i #alors on assoscie la valeur du resultat passer en paramètre au numéro de ligne
         return res
 
 def tri(tab): #fonction de trie
-    for i in range(len(tab)-1):
-        rmin=rangmintab(tab,i)
-        permut(tab,i,rmin)
+    for i in range(len(tab)-1): #comme on compare l'element a celui d'après, -1 car si on arrive a la fin il n'y a pas d'après
+        rmin=rangmintab(tab,i) #on associe de le resultat de la fonction précédente a la variable rmin
+        permut(tab,i,rmin) #on associe les variable a permute pour la fonction d'après
 
 
-def permut(tab,a,b):
+def permut(tab,a,b): #
     temp=tab[a]
     tab[a]=tab[b]
     tab[b]=temp
