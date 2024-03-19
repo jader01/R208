@@ -3,7 +3,7 @@
 #############################################################################################
 
 
-#1. creation de tableau
+#1. creation des deux tableau
 def adperson(tab, nom, prenom, sexe, date): #fonction d'ajout de personnes
     #print("creation du tableau des personnes....")
     #ce tableau servira repertorirer les personnes
@@ -40,9 +40,29 @@ def adparent(tab, enfant, parent):
     return(tab)
 
 
+#5. connaitre les parent a partir du numero
+def sortparent(adparent:list, selectnum:list, id:int)-> list: #les :[] servent a spécifier le type attendu et le --> sert a spécifier ce que tu veux en sortie 
+    print("lancement de la fonction d'association : \n")
+
+    print("le tableau de l'asso indice enfant et indice parent est :\n")
+    print(adparent)
+
+    print("le tableau d'association indice + personne est : \n")
+    print(selectnum)
+
+    #if adparent[1][1]==selectnum[1][0]:
+        #print("CA MARCHE")
+        #print(selectnum[0], "est l'enfant de", selectnum[1])
+
+    tabparent=[] #tableau stockage du resulstat
+    for elm in adparent : #pour tous les element dans le tableau ad parent (du coup ça prend petite liste par petite liste)
+        if id ==elm[0] : #on associe l'id passer en paramètre au première element des petites 
+            tabparent.append(elm[1]) #on rajoute au tableau le deuxième element de la petite liste (qui correspondra donc aux parents)
+    print(tabparent)
 
 
 
+ 
 
     
 
@@ -72,6 +92,9 @@ adparent(tab2, 0, 1)
 adparent(tab2, 2, 1)
 #print("resultat fonction ad parent :", tab2)
 
+
+
 # apl de fonction
+sortparent(tab2, tabindice, 0)
 
 print("\n \nfin du programme.")
