@@ -57,6 +57,7 @@ def sortparent(adparent:list, selectnum:list, id:int)-> list: #les :[] servent a
     tabparent=[] #tableau stockage du resulstat
     for elm in adparent : #pour tous les element dans le tableau ad parent (du coup ça prend petite liste par petite liste)
         if id ==elm[0] : #on associe l'id passer en paramètre au première element des petites 
+            print("\n l'id du parent choisi est :")
             tabparent.append(elm[1]) #on rajoute au tableau le deuxième element de la petite liste (qui correspondra donc aux parents)
     print(tabparent)
 
@@ -79,6 +80,8 @@ adperson(tab, 'jean', 'coline', 2, (1971,7,12))
 adperson(tab, 'dupouy', 'bernard', 1, (2007,6,14))
 adperson(tab, 'nemesis', 'noah', 1, (2004, 2, 2))
 adperson(tab, 'overlord', 'ju', 1, (2004, 2, 2))
+adperson(tab, 'martin', 'simon', 1, (1970, 2, 2))
+
 
 # apl de fonction
 printtab()
@@ -90,11 +93,13 @@ print("resultat fonction selectnum", tabindice)
 tab2=[]
 adparent(tab2, 0, 1)
 adparent(tab2, 2, 1)
+adparent(tab2, 4, 5)
+
 #print("resultat fonction ad parent :", tab2)
 
 
 
 # apl de fonction
-sortparent(tab2, tabindice, 0)
+sortparent(tab2, tabindice, 4) #on appelle la fonction de sortie des parents avec en paramètre le tbaleau asso--> idenfant | id parent, puis le tableau indice | personne, puis la valeur de l'enfant rechercher (qui a therme sera un input)
 
 print("\n \nfin du programme.")
