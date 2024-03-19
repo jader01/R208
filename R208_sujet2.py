@@ -11,8 +11,6 @@ def adperson(tab, nom, prenom, sexe, date): #fonction d'ajout de personnes
     #print(tab)
     print("\n")
     return(tab)
-    
-
 
 
 #2. affichage du tableau
@@ -40,26 +38,28 @@ def adparent(tab, enfant, parent):
     return(tab)
 
 
+
 #5. connaitre les parent a partir du numero
-def sortparent(adparent:list, selectnum:list, id:int)-> list: #les :[] servent a spécifier le type attendu et le --> sert a spécifier ce que tu veux en sortie 
+def findparent(adparent:list, id:int)-> list: #les :[] servent a spécifier le type attendu et le --> sert a spécifier ce que tu veux en sortie 
     print("lancement de la fonction d'association : \n")
 
     print("le tableau de l'asso indice enfant et indice parent est :\n")
     print(adparent)
 
-    print("le tableau d'association indice + personne est : \n")
-    print(selectnum)
+    #print("le tableau d'association indice + personne est : \n")
+    #print(selectnum)
 
-    #if adparent[1][1]==selectnum[1][0]:
-        #print("CA MARCHE")
-        #print(selectnum[0], "est l'enfant de", selectnum[1])
-
+    print("les ascendant de l'id choisi sont : \n")
     tabparent=[] #tableau stockage du resulstat
     for elm in adparent : #pour tous les element dans le tableau ad parent (du coup ça prend petite liste par petite liste)
         if id ==elm[0] : #on associe l'id passer en paramètre au première element des petites 
-            print("\n l'id du parent choisi est :")
-            tabparent.append(elm[1]) #on rajoute au tableau le deuxième element de la petite liste (qui correspondra donc aux parents)
+            indiceparent=elm[1] #on associe id a l'id du parent trouver pour l'enfant demander
+            tabparent.append(indiceparent) #on rajoute au tableau de résultat l'id du parent
+            
+            tabparent += findparent(adparent, indiceparent) # on concatène le tableau de resultat on lui rajoutant a chaque fois (avec +=) le resultat de notre fonction que l'on re r'apelle
     print(tabparent)
+
+    return(tabparent)
 
 
 
@@ -80,7 +80,7 @@ adperson(tab, 'jean', 'coline', 2, (1971,7,12))
 adperson(tab, 'dupouy', 'bernard', 1, (2007,6,14))
 adperson(tab, 'nemesis', 'noah', 1, (2004, 2, 2))
 adperson(tab, 'overlord', 'ju', 1, (2004, 2, 2))
-adperson(tab, 'martin', 'simon', 1, (1970, 2, 2))
+adperson(tab, 'martin', 'simon', 1, (1920, 2, 2))
 
 
 # apl de fonction
@@ -93,13 +93,13 @@ print("resultat fonction selectnum", tabindice)
 tab2=[]
 adparent(tab2, 0, 1)
 adparent(tab2, 2, 1)
-adparent(tab2, 4, 5)
+adparent(tab2, 1, 5)
 
 #print("resultat fonction ad parent :", tab2)
 
 
 
 # apl de fonction
-sortparent(tab2, tabindice, 4) #on appelle la fonction de sortie des parents avec en paramètre le tbaleau asso--> idenfant | id parent, puis le tableau indice | personne, puis la valeur de l'enfant rechercher (qui a therme sera un input)
+findparent(tab2, 0) #on appelle la fonction de sortie des parents avec en paramètre le tbaleau asso--> idenfant | id parent, puis le tableau indice | personne, puis la valeur de l'enfant rechercher (qui a therme sera un input)
 
 print("\n \nfin du programme.")
