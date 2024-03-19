@@ -3,7 +3,7 @@
 #############################################################################################
 
 
-#1. creation des deux tableau
+#1. creation de tableau
 def adperson(tab, nom, prenom, sexe, date): #fonction d'ajout de personnes
     #print("creation du tableau des personnes....")
     #ce tableau servira repertorirer les personnes
@@ -12,12 +12,7 @@ def adperson(tab, nom, prenom, sexe, date): #fonction d'ajout de personnes
     print("\n")
     return(tab)
     
-def adparent(tab, enfant, parent): #ajout du deuxième tableau
-    #print("creation du tableau lien parents enfant...")
-    #ce tableau fera le lien entre l'indice d'une personne et l'indice de sont parent ex :
-    # si sur une me ligne on as [1, 3] cela veut dire que la personne avec l'indice 1 aura pour parent la perosnne avec l'indice 3
-    tab.append([enfant, parent])
-    return(tab)
+
 
 
 #2. affichage du tableau
@@ -30,12 +25,22 @@ def printtab(): #affichage du tableau ad person
 #3. selectionner num personne
 def selectnum(tab): 
     print("\n selection du numero de l'indice et lien avec la personnes :")
+    indiceparent=[] #tableau d'association du résultat
     for num in range(len(tab)) : #pour tout les numero (qui correspondent a l'indice du parents) allant jusqu'a la taille du tableau
-        print(num, tab[num]) #on affiche sont indice a coté les infos de la personne lier a cette infice
+        indiceparent.append([num, tab[num]]) #on affiche sont indice a coté les infos de la personne lier a cette indice
+    print(indiceparent)
 
-#4. link personne tab
-#def linkparent(tabpeople, tablink):
-    #if 
+    return(indiceparent)
+    
+
+
+#4. faire des association du tableau parent enfant
+def adparent(tab, enfant, parent):
+    tab.append([enfant, parent])
+    return(tab)
+
+
+
 
 
 
@@ -55,13 +60,18 @@ adperson(tab, 'dupouy', 'bernard', 1, (2007,6,14))
 adperson(tab, 'nemesis', 'noah', 1, (2004, 2, 2))
 adperson(tab, 'overlord', 'ju', 1, (2004, 2, 2))
 
-##
+# apl de fonction
 printtab()
-selectnum(tab)
+tabindice=selectnum(tab)
+print("resultat fonction selectnum", tabindice)
 ##
 
-#valeur en brut ajout d eien
-adparent(tab, 0, 1)
-adparent(tab, 2, 1)
+#valeur en brut ajout lien parent efnan 
+tab2=[]
+adparent(tab2, 0, 1)
+adparent(tab2, 2, 1)
+#print("resultat fonction ad parent :", tab2)
+
+# apl de fonction
 
 print("\n \nfin du programme.")
