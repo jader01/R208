@@ -5,11 +5,14 @@
 
 #1. creation des deux tableau
 def adperson(tab, nom, prenom, sexe, date): #fonction d'ajout de personnes
+    #ce tableau servira repertorirer les personnes
     tab.append([nom, prenom, sexe, date]) #on rajouter toutes ces valeur dans un tableau
     #print(tab)
     return(tab)
     
-def adparent(tab, enfant, parent):
+def adparent(tab, enfant, parent): #ajout du deuxième tableau
+    #ce tableau fera le lien entre l'indice d'une personne et l'indice de sont parent ex :
+    # si sur une me ligne on as [1, 3] cela veut dire que la personne avec l'indice 1 aura pour parent la perosnne avec l'indice 3
     tab.append([enfant, parent])
     print(tab)
     return(tab)
@@ -28,7 +31,7 @@ def selectnum(tab):
 
 
 #4. link personne tab
-def linkparent():
+#def linkparent():
     
 
 
@@ -41,11 +44,11 @@ adperson(tab, 'rueda lucantis', 'jade', 2, (2004,3,3))
 adperson(tab, 'jean', 'coline', 2, (1971,7,12))
 adperson(tab, 'dupouy', 'bernard', 1, (2007,6,14))
 adperson(tab, 'nemesis', 'noah', 1, (2004, 2, 2))
+adperson(tab, 'overlord', 'ju', 1, (2004, 2, 2))
 
 printtab()
 selectnum(tab)
 
 adparent(tab, 0, 1)
 
-#adparent(tab, 0, 1)
 
