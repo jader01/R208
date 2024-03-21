@@ -76,7 +76,7 @@ def findenfant(adparent:list, id: int)-> list:
             tabenfant += findenfant(adparent, indiceenfant)
     #print("la descandance de ", id, "est :")
     
-    print("la desceandance est composé de : \n", tabenfant)
+    print("la desceandance est composé de : \n", tabenfant, "\n")
     return(tabenfant)
 
 
@@ -86,21 +86,22 @@ def lienfrsr(adparent, id:int):
     fretsr=[] #pour stocker le resultat final lien frère et soeur
     idparent=[] #pour stoker les parents pour faire le lien plus tard
     
-    print("le t'ableau utiliser est :", adparent)
+    #print("le t'ableau utiliser est :", adparent)
 
-    print("lancement de la fonction retrouver frère et soeur")
+    print("lancement de la fonction retrouver frère et soeur \n")
     for elm in adparent: #on cherche a nouveaux les différentes partie dans adprent
         if id==elm[0]: #si l'id correspond à l'indice d'un enfant
             idparent.append(elm[1]) #alors on rajoute 
-    print("l'enfant qui a pour id", elm[0], "a pour parent les personne avec l'id", idparent) #juste pour voirs l'avancer de la fonctoin
+    #print("l'enfant qui a pour id", elm[0], "a pour parent les personne avec l'id", idparent) #juste pour voirs l'avancer de la fonctoin
 
-    for elm in adparent :
-        if id!=elm[0] and idparent==elm[1]: #si l'id de l'enfant n'est pas = a l'id et que l'id du parent est égale à celui trouver avant
-            fretsr.append(elm[0])
-            print(elm[0])
+    for p in idparent: #on parcours pour la première fois les element dans ma table d'id parent
+        for elm2 in adparent : #et on parcours une nouvelle fois la liste pour trouver les élement
+            if id!=elm2[0] and p==elm2[1]: #si l'id de l'enfant n'est pas = a l'id et que l'id du parent est égale à celui trouver avant
+                fretsr.append(elm2[0]) #on ajoute l'élement du frère dans le tableau de resultat
+                print("l'enfant qui a pour id", id, "et qui a pour parents", idparent, "a pour frère ou soeur", fretsr)
     #print('laaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', fretsr)
 
-
+#8. a partir du numéro de personne affiche les info des personnes classer par non
 
  
 
@@ -147,6 +148,6 @@ adparent(tab2, 0, 3)
 findparent(tab2, 0) #on appelle la fonction de sortie des parents avec en paramètre le tbaleau asso--> idenfant | id parent, puis le tableau indice | personne, puis la valeur de l'enfant rechercher (qui a therme sera un input)
 findenfant(tab2, 4) #apelle de la fonction permettant de trouver la descandance d'une personne
 
-#lienfrsr(tab2, 0)
+lienfrsr(tab2, 0)
 
 print("\n \nfin du programme.")
