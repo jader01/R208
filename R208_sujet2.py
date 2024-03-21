@@ -57,8 +57,7 @@ def findparent(adparent:list, id:int)-> list: #les :[] servent a spécifier le t
             tabparent.append(indiceparent) #on rajoute au tableau de résultat l'id du parent
             
             tabparent += findparent(adparent, indiceparent) # on concatène le tableau de resultat on lui rajoutant a chaque fois (avec +=) le resultat de notre fonction que l'on re r'apelle
-    print("les ascendant de l'id choisi sont : \n")
-    print(tabparent)
+    print("les ascendant de l'id choisi sont : \n", tabparent, "\n")
 
     return(tabparent)
 
@@ -98,11 +97,17 @@ def lienfrsr(adparent, id:int):
         for elm2 in adparent : #et on parcours une nouvelle fois la liste pour trouver les élement
             if id!=elm2[0] and p==elm2[1]: #si l'id de l'enfant n'est pas = a l'id et que l'id du parent est égale à celui trouver avant
                 fretsr.append(elm2[0]) #on ajoute l'élement du frère dans le tableau de resultat
-                print("l'enfant qui a pour id", id, "et qui a pour parents", idparent, "a pour frère ou soeur", fretsr)
+                print("l'enfant qui a pour id", id, "et qui a pour parents", idparent, "a pour frère ou soeur", fretsr, "\n")
     #print('laaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', fretsr)
 
-#8. a partir du numéro de personne affiche les info des personnes classer par non
+#8. a partir du numéro de personne affiche les info des personnes classer par nom
 
+def infopeople(tabpersonneetid:list, id:int):
+    print("le tableau de personne utilisé est", tabpersonneetid)
+    print("l'id choisi est ", id)
+
+    #for elm in tabpersonne :
+        #if 
  
 
     
@@ -149,5 +154,7 @@ findparent(tab2, 0) #on appelle la fonction de sortie des parents avec en param�
 findenfant(tab2, 4) #apelle de la fonction permettant de trouver la descandance d'une personne
 
 lienfrsr(tab2, 0)
+
+infopeople(tabindice, 0)
 
 print("\n \nfin du programme.")
