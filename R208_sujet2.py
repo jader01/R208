@@ -86,12 +86,20 @@ def lienfrsr(adparent, id:int):
     fretsr=[] #pour stocker le resultat final lien frère et soeur
     idparent=[] #pour stoker les parents pour faire le lien plus tard
     
+    print("le t'ableau utiliser est :", adparent)
+
+    print("lancement de la fonction retrouver frère et soeur")
     for elm in adparent: #on cherche a nouveaux les différentes partie dans adprent
         if id==elm[0]: #si l'id correspond à l'indice d'un enfant
             idparent.append(elm[1]) #alors on rajoute 
-    print("l'enfant qui a pour id", elm[0], "a pour parent les personne avec l'id", idparent)
+    print("l'enfant qui a pour id", elm[0], "a pour parent les personne avec l'id", idparent) #juste pour voirs l'avancer de la fonctoin
 
     for elm in adparent :
+        if id!=elm[0] and idparent==elm[1]: #si l'id de l'enfant n'est pas = a l'id et que l'id du parent est égale à celui trouver avant
+            fretsr.append(elm[0])
+            print(elm[0])
+    #print('laaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', fretsr)
+
 
 
  
