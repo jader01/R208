@@ -98,13 +98,22 @@ def lienfrsr(adparent, id:int):
             if id!=elm2[0] and p==elm2[1]: #si l'id de l'enfant n'est pas = a l'id et que l'id du parent est égale à celui trouver avant
                 fretsr.append(elm2[0]) #on ajoute l'élement du frère dans le tableau de resultat
                 print("l'enfant qui a pour id", id, "et qui a pour parents", idparent, "a pour frère ou soeur", fretsr, "\n")
-    #print('laaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', fretsr)
+
 
 #8. a partir du numéro de personne affiche les info des personnes classer par nom
 
-def infopeople(tabpersonneetid:list, id:int):
-    print("le tableau de personne utilisé est", tabpersonneetid)
-    print("l'id choisi est ", id)
+def infopeople(tabpersonneetid:list, id1:int, id2:int, id3:int):
+    #print("le tableau de personne utilisé est", tabpersonneetid)
+    print("l'id choisi est ", id1)
+    stockid=[]
+
+    stockid.append(id1)
+    stockid.append(id2)
+    stockid.append(id3)
+
+    for elm in tabpersonneetid : #pour tous les element dans le tableau d'association personne = id
+        if elm[0]==id1 : #si l'indice correspon à l'id choisi
+            print("la personne correspondant à l'indice", id1, "est :", elm[1]) #on affiche la personne associé
 
     #for elm in tabpersonne :
         #if 
@@ -155,6 +164,6 @@ findenfant(tab2, 4) #apelle de la fonction permettant de trouver la descandance 
 
 lienfrsr(tab2, 0)
 
-infopeople(tabindice, 0)
+infopeople(tabindice, 0, 1, 2)
 
 print("\n \nfin du programme.")
