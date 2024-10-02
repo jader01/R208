@@ -12,6 +12,7 @@ Bienvenue dans le projet R208, composé de plusieurs mini-projets destinés à r
 
 ### `Help.py`
 Ce fichier contient des instructions et des conseils fournis par le professeur pour aider à la réalisation des sujets de TP. Il peut être utilisé comme guide pour comprendre certaines notions d'algorithmique et de programmation.
+- [`Help.py`](Help.py)
 
 ### `R208_sujet1.py`
 **Sujet :**  
