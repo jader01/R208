@@ -24,6 +24,8 @@ Les compétences abordées incluent :
 - Concevoir un algorithme à partir d'un énoncé et le traduire en Python
 - Compiler, corriger et tester un programme
 
+- [`R208_sujet1.py`](R208/R208_sujet1.py) : Premier sujet du TP.
+
 ### `R208_sujet2.py`
 **Sujet :**  
 L'objectif de ce second TP sous forme de mini-projet informatique est similaire au premier, avec l'objectif de renforcer les compétences en algorithmique et programmation Python, acquises lors du module R107. Le but est de progresser en autonomie et de consolider les bases d'algorithmique essentielles à la poursuite du cursus académique.
@@ -35,8 +37,7 @@ Les notions abordées dans ce projet incluent :
 - Concevoir un algorithme à partir d'un énoncé et le traduire en Python
 - Compiler, corriger et tester un programme
 
-## Utilisation
-Pour utiliser ce projet, clonez le dépôt et lancez les fichiers Python dans l'ordre des sujets ou selon vos besoins d'apprentissage. Les sujets sont indépendants et peuvent être réalisés à votre propre rythme.
+- [`R208_sujet2.py`](R208/R208_sujet2.py) : Deuxième sujet du TP.
 
 ```bash
 git clone https://github.com/votre-repo/R208.git
