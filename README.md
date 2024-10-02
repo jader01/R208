@@ -4,7 +4,7 @@ Bienvenue dans le projet R208, composé de plusieurs mini-projets destinés à r
 
 ## Contenu du Répertoire
 
-- [`R208_sujet1.py`](main/R208_sujet1.py) : Premier sujet du TP.
+- [`R208_sujet1.py`](R208/R208_sujet1.py) : Premier sujet du TP.
 - [`R208_sujet2.py`](R208/R208_sujet2.py) : Deuxième sujet du TP.
 - [`Help.py`](R208/Help.py) : Fichier d'aide fourni par le professeur.
 
