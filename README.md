@@ -4,9 +4,9 @@ Bienvenue dans le projet R208, composé de plusieurs mini-projets destinés à r
 
 ## Contenu du Répertoire
 
-- [`R208_sujet1.py`](R208/R208_sujet1.py) : Premier sujet du TP.
-- [`R208_sujet2.py`](R208/R208_sujet2.py) : Deuxième sujet du TP.
-- [`Help.py`](R208/Help.py) : Fichier d'aide fourni par le professeur.
+- [`R208_sujet1.py`](R208_sujet1.py) : Premier sujet du TP.
+- [`R208_sujet2.py`](R208_sujet2.py) : Deuxième sujet du TP.
+- [`Help.py`](Help.py) : Fichier d'aide fourni par le professeur.
 
 ## Description des Fichiers
 
@@ -24,7 +24,7 @@ Les compétences abordées incluent :
 - Concevoir un algorithme à partir d'un énoncé et le traduire en Python
 - Compiler, corriger et tester un programme
 
-- [`R208_sujet1.py`](R208/R208_sujet1.py) : Premier sujet du TP.
+- [`R208_sujet1.py`](R208_sujet1.py) : Premier sujet du TP.
 
 ### `R208_sujet2.py`
 **Sujet :**  
@@ -37,7 +37,7 @@ Les notions abordées dans ce projet incluent :
 - Concevoir un algorithme à partir d'un énoncé et le traduire en Python
 - Compiler, corriger et tester un programme
 
-- [`R208_sujet2.py`](R208/R208_sujet2.py) : Deuxième sujet du TP.
+- [`R208_sujet2.py`](R208_sujet2.py) : Deuxième sujet du TP.
 
 ```bash
 git clone https://github.com/votre-repo/R208.git
