@@ -40,8 +40,3 @@ Les notions abordées dans ce projet incluent :
 
 - [`R208_sujet2.py`](R208_sujet2.py) : Deuxième sujet du TP.
 
-```bash
-git clone https://github.com/votre-repo/R208.git
-cd R208
-python R208_sujet1.py
-python R208_sujet2.py
