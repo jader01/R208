@@ -1,6 +1,7 @@
 # Projet R208 - Mini Projets d'Algorithmique
 
-Bienvenue dans le projet R208, composé de plusieurs mini-projets destinés à renforcer les compétences de base en algorithmique et programmation Python. Ce dépôt contient trois fichiers Python qui sont des sujets de TP individuels, ainsi qu'un fichier d'aide fourni par le professeur pour accompagner les travaux.
+Bienvenue dans le projet R208, composé de plusieurs mini-projets destinés à renforcer les compétences de base en algorithmique et programmation Python.
+Ce dépôt contient trois fichiers Python qui sont des sujets de TP individuels, ainsi qu'un fichier d'aide fourni par le professeur pour accompagner les travaux.
 
 ## Contenu du Répertoire
 
