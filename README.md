@@ -17,14 +17,14 @@ Ce fichier contient des instructions et des conseils fournis par le professeur p
 
 ### `R208_sujet1.py`
 **Sujet :**  
-L'objectif de ce premier TP sous forme de mini-projet informatique est de consolider les compétences de base en algorithmique acquises lors du module R107 "Fondamentaux de la programmation". Vous travaillerez individuellement afin que chacun puisse évaluer ses compétences, corriger d'éventuelles lacunes et progresser en algorithmique sans dépendre d'un binôme ou d'un groupe.
+L'objectif de ce premier TP sous forme de mini-projet informatique est de consolider les compétences de base en algorithmique acquises lors du module R107 "Fondamentaux de la programmation".
 
 Les compétences abordées incluent :
 - Variables et structures de données (tableaux, tuples, listes)
 - Structures de contrôle (tests, boucles, structures imbriquées)
 - Sous-programmes (fonctions avec passage de paramètres, retour de résultat, visibilité des variables)
 - Concevoir un algorithme à partir d'un énoncé et le traduire en Python
-- Compiler, corriger et tester un programme
+- corriger et tester un programme
 
 - [`R208_sujet1.py`](R208_sujet1.py) : Premier sujet du TP.
 
@@ -37,7 +37,7 @@ Les notions abordées dans ce projet incluent :
 - Structures de contrôle (tests, boucles, structures imbriquées)
 - Sous-programmes (fonctions avec passage de paramètres, retour de résultat, visibilité des variables)
 - Concevoir un algorithme à partir d'un énoncé et le traduire en Python
-- Compiler, corriger et tester un programme
+- corriger et tester un programme
 
 - [`R208_sujet2.py`](R208_sujet2.py) : Deuxième sujet du TP.
 
